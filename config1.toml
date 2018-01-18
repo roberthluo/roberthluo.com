@@ -1,0 +1,42 @@
+baseURL = "http://roberthluo.com"
+languageCode = "en-us"
+title = ""
+theme = "hugo-goa"
+canonifyurls = true
+
+DefaultContentLanguage = "en"
+metaDataFormat = "yaml"
+pygmentsUseClasses = true
+pygmentCodeFences = true
+googleAnalytics = "UA-105754357-1"
+
+[Params]
+  #subtitle = "Hugo Blog Template"
+  logo = "/img/git-avatar.png"
+  dateform = "Jan 2, 2006"
+  dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+
+[Author]
+  name = "Robert Luo"
+  github = "/roberthluo"
+  twitter = "/robertl_0"
+
+[[menu.main]]
+  name = "Blog"
+  url = "/Blog"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/About"
+  weight = 2
+
+[[menu.main]]
+  name = "Projects"
+  url = "/Projects"
+  weight = 2
+
+  [[menu.main]]
+    name = "Other"
+    url = "/Other"
+    weight = 2

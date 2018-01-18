@@ -1,0 +1,69 @@
+baseurl = "https://roberthluo.com/"
+languageCode = "en-us"
+Title = "Robert Luo"
+theme = "hugo_theme_pickles-master"
+# Copyright notice. This is displayer in the footer.
+copyright = "&copy; Copyright notice 2018"
+
+[params]
+  paginate = 10
+  # Social accounts. Link to these accounts are displayed in the header and
+  # footer
+  twitter = "robertl_0"
+  #facebook = "Your Facebook username"
+  #instagram = "Your Instagram username"
+  #googleplus = "Your Google+ account URL" # https://plus.google.com/u/0/xxxxxx
+  github = "roberthluo"
+  #gitlab = "Your GitLab username"
+  #npm = "Your npm username"
+  #codepen = "Your CodePen username"
+  #dribbble = "Your Dribbble username"
+  #fivehundredpx = "Your 500px username" # 500px
+  #flickr = "Your Flickr username"
+  #pinterest = "Your Pinterest username"
+  #tumblr = "Your Tumblr username"
+  #vimeo = "Your Vimeo username"
+  #youtube = "Your YouTube username"
+  linkedin = "Your LinkedIn username"
+  # Disqus shortname
+  #disqus = ""
+  # Google Analytics API key.
+  ga_api_key = "UA-105754357-1"
+  author = "roberthluo"
+  # authorwebsite = "example.com"
+  avatar = "/img/git-avatar.png"
+  contact = "Your contact link (ex. mailto:foo@example.com)"
+  bio = "Hey! I'm Robert. Here are the collections of things I find interesting."
+  # Short subtitle/tagline. This is displayed in the header.
+  # subtitle = "Short subtitle"
+  # Logo image. This is displayed ogp image.
+  # logo = "/static/img/git-avatar.png"
+  # favicon = "/path/to/favicon"
+
+# [[menu.main]]
+#     name = "Blog"
+#     url = "/blog"
+#     weight = 1
+#
+#
+# [[menu.main]]
+#     name = "Theme"
+#     url = "/theme"
+#     weight = 3
+
+# [[menu.main]]
+#     parent = "theme"
+#     name = "creating-a-new-theme"
+#     url = "/posts/creating-a-new-theme"
+#     weight = 1
+#
+# [[menu.main]]
+#     parent = "theme"
+#     name = "migrate-from-jekyll"
+#     url = "/posts/migrate-from-jekyll"
+#     weight = 2
+
+[[menu.main]]
+    name = "Tags"
+    url = "/tags"
+    weight = 4
