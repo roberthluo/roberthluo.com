@@ -20,7 +20,7 @@ I thought it was quite strange that it did not work off the box. Off to Google w
 
 I opened Neflix in Firefox and it still gave me a f7355 error. After a bit more searching, I suspected that the codec might not be installed in fedora, and I booted onto my Windows partition to check. I was right. The same version of Firefox - 62.0.1 was working in Windows, but not in Fedora 28. So I tried to see if which codec was missing from firefox. 
 
-Luckily, [Youtube has a nifty little tester.]:https://www.youtube.com/html5/ Here I realized that h.264 was still not enabled. 
+Luckily, Youtube has a [nifty little tester](https://www.youtube.com/html5/). Here I realized that h.264 was still not enabled. 
 
 Finally, I got the solution. I had to install the correct codecs on Fedora and enable the RPM fusion repo.
 
@@ -31,7 +31,9 @@ su -c 'dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-rel
 sudo dnf install ffmpeg-libs
 ```
 
-If you go back to the [Youtube Tester]:(https://www.youtube.com/html5/), you should see all encodings enabled.
+If you go back to the [Encodings Tester](https://www.youtube.com/html5/), you should see all encodings enabled.
+
+![Image of Working](https://github.com/roberthluo/roberthluo.com/tree/master/static/img/blog/firefox-netflix/irefox-netflix/Screenshot from 2018-10-14 15-44-07.png)
 
 Ahhh finally...
 
