@@ -2,7 +2,7 @@
 title: "Firefox Netflix"
 Description: ""
 date: 2018-10-14T14:53:05-04:00
-draft: true
+draft: false
 thumbnail: "/images/pickles.jpg"
 Tags:
   - firefox
