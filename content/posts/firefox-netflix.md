@@ -33,7 +33,7 @@ sudo dnf install ffmpeg-libs
 
 If you go back to the [Encoding Tester](https://www.youtube.com/html5/), you should see all encodings enabled.
 
-![Image of Working](hhttps://raw.githubusercontent.com/roberthluo/roberthluo.com/blob/master/static/img/blog/firefox-netflix/netflix-work-for-it.png)
+![Image of Working](https://raw.githubusercontent.com/roberthluo/roberthluo.com/master/static/img/blog/firefox-netflix/netflix-work-for-it.png)
 
 Ahhh finally...
 
