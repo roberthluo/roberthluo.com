@@ -2,7 +2,7 @@
 title: "Firefox Netflix"
 Description: ""
 date: 2018-10-14T14:53:05-04:00
-draft: true
+draft: false
 thumbnail: "/images/pickles.jpg"
 Tags:
   - firefox
@@ -31,7 +31,7 @@ su -c 'dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-rel
 sudo dnf install ffmpeg-libs
 ```
 
-If you go back to the [Encodings Tester](https://www.youtube.com/html5/), you should see all encodings enabled.
+If you go back to the [Encoding Tester](https://www.youtube.com/html5/), you should see all encodings enabled.
 
 ![Image of Working](hhttps://raw.githubusercontent.com/roberthluo/roberthluo.com/blob/master/static/img/blog/firefox-netflix/netflix-work-for-it.png)
 
