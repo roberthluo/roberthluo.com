@@ -3,7 +3,6 @@ title: "Kubernetes Intro"
 Description: ""
 date: 2018-12-23T19:44:31-05:00
 draft: false
-thumbnail: "/images/pickles.jpg"
 Tags:
   - kubernetes
   - linux foundation
