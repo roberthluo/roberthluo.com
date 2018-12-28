@@ -21,7 +21,7 @@ Kubernetes communication and configuration information is stored in YAML format,
 
 To understand Kubernetes, we must first understand Docker - it is a way to package, ship and deploy applications. K8s just manages them at scale and runs it in a distributed fashion.
 
-High Level Architecture of Kubernetes:
+# High Level Architecture of Kubernetes:
 
 ![Image of Working](https://raw.githubusercontent.com/roberthluo/roberthluo.com/master/static/img/blog/kubernetes-series/kubernetes-architecture.png)
 
@@ -38,27 +38,65 @@ There are two processes in the node of each cluster:
 
 There is a important concept central to k8s - Pods. A Pods is an object that consists of one or more containers which share an IP address, access to storage and namespace. Usually there a container in the Pod runs the main application, while there may be smaller containers to support the main application.
 
-Master Node (Primary Node):
+### Important terms:
+------------
+
+_Master Node (Primary Node)_:
 contains the kube-apiserver, kube-scheduler and etcd database. Used to run server and manager processes for the cluster.
 
-kube-apiserver:
+_kube-apiserver_:
 Services REST operators and provides information about cluster's shared state. All actions are accepted and validated by this agent and it is the only connection to the etcd database
 
-kube-scheduler:
+_kube-scheduler_:
 a scheduler using an algorithm to determine which node will host the Pod of containers (can be customized).
 
-etcd:
+_etcd_:
 A high available key-value store, extremely persistent. There is a master database, along with follower databases.
 
-Controllers are use the manage the orchestration. Each controller pings the kube-apiserver for a particular object state until the declared state matches the current state.
+_Controllers_:
+are used to manage the orchestration. Each controller pings the kube-apiserver for a particular object state until the declared state matches the current state.
 
-ReplicatSet:
+_ReplicatSet:
 A controller that deploys and restart containers until there are the required about of containers running. Deployments are used to ensure that resources are available before deploying a ReplicaSet.
 
-Job:
+_Job_:
 Single or recurring tasks, can also be a CronJob (scheduled by time)
 
-kube-controller-manager:
+_kube-controller-manager_:
 A daemon that interacts with kube-apiserver to determine state of the cluster. if the state does not match the desired, the kube-controller-manager will try to match the desired state using the controller.
 
+_kube-proxy_:
+Is in charge of managing the network connectivity to the containers using iptables.
+
+_kubelet_:
+makes sure that the containers that are required to run is running, communicates with the Container Engine to do so. It accepts API calls for Pod specifications, and will provision and configure a node until the Pod specifications are met.
+
+_Worker Node (Replica Node)_:
+All worker node run the kubelet and kube-proxy and the Container Engine.
+
+_Supervisord_:
+A lightweight process monitor to monitor kubelet and docker processes.
+
+_Pods_:
+Pods are the smallest unit K8s works with. It has a one container per process architecture. There is also only one IP address per Pod. With more than one container, they must share the IP address, and they can communicate with each other using (Inter-process communication) IPC or shared filesystem. We may use sidecars in containers (a helper task) like logging as a seperate container to help the primary application.
+
+_Services_:
+A service is an agent that connects resources and handles scaling. It triggers when Pods dies and a replacement is spawned for handling a portion of traffic.
+It has resource control, as well as security policies too.
+
+_Controllers_:
+We use controlers to check if there are differences between specification of the object and the object itself. It uses a DeltaFIFO queue, where the downstream and the source are compared. The process receives a object, with is array of delta from the FIFO queue. If the delta is not of Deleted, the logic of the controller is used to modify the some object until it matches the specification.
+
+_Informer_:
+It uses the API server as a source to request a state of a object.
+
+_Workerqueue_:
+Uses a key to hand out tasks to different workers.
+
+_Networking Setup_:
+The network will need to solve three main challenges in Kubernetes:
+
+* container-to-container communications (Solved using Pod)
+* pod-to-pod communications
+* external-to-pod communications
 
