@@ -29,6 +29,7 @@ _rkt_ is a CLI for running containers, and deploys immutable pods.
 _cri-o_ is a implementation of CRI to enable using _OCI_ (Open Container Initiative) compatible runtimes.
 
 _containerd_ is used to expose low level primitives
+
 * minimal CLI
 * embedded into larger systems
 * runs containers in accordance to _OCI_
