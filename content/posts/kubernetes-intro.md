@@ -15,5 +15,7 @@ For the past few months at my job, I have been using Docker for deployment autom
 
 I will be writing a series of posts during my course progress, to help explain the terminalogy and architecture in my own terms, and also maybe incorprate of [Kelsey Hightower's](https://twitter.com/kelseyhightower) extremely useful thought processes and course on Kubernetes - [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way).
 
+Note: There are labs and exercises in the background that I will do from both Kubernetes The Hard Way and also Kubernetes for Developers. I will be mentioning them in passing and also in reference, but I will not be focusing on them in the series of posts. I am using [Google Cloud Platform](https://cloud.google.com/) to bootstrap the Kubernetes cluster.
+
 
 ![Image of Kubernetes](https://upload.wikimedia.org/wikipedia/en/0/00/Kubernetes_%28container_engine%29.png)
