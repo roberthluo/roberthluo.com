@@ -56,7 +56,7 @@ A high available key-value store, extremely persistent. There is a master databa
 _Controllers_:
 are used to manage the orchestration. Each controller pings the kube-apiserver for a particular object state until the declared state matches the current state.
 
-_ReplicatSet:
+_ReplicaSet_:
 A controller that deploys and restart containers until there are the required about of containers running. Deployments are used to ensure that resources are available before deploying a ReplicaSet.
 
 _Job_:
